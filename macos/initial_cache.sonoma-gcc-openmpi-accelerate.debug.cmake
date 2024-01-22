@@ -1,0 +1,17 @@
+set(CMAKE_Fortran_COMPILER "mpifort" CACHE STRING "" FORCE)
+# debug flags: -fcheck=all -fbacktrace
+set(CMAKE_Fortran_FLAGS "-g -O0 -fbacktrace -fallow-argument-mismatch -ffree-line-length-none -framework accelerate -Wl,-ld_classic" CACHE STRING "" FORCE)
+set(Fortran_MIN_FLAGS "-g -O0 -fbacktrace -fallow-argument-mismatch -ffree-line-length-none -framework accelerate -Wl,-ld_classic" CACHE STRING "" FORCE)
+set(CMAKE_C_COMPILER "mpicc" CACHE STRING "" FORCE)
+set(CMAKE_C_FLAGS "-g -O0 -framework accelerate -Wl,-ld_classic" CACHE STRING "" FORCE)
+set(CMAKE_CXX_COMPILER "mpicxx" CACHE STRING "" FORCE)
+set(CMAKE_CXX_FLAGS "-g -O0 -framework accelerate -Wl,-ld_classic" CACHE STRING "" FORCE)
+set(LIB_PATHS "/opt/packages/scalapack/2.2.0/gcc-13.2.0-openmpi-4.1.6-accelerate" CACHE STRING "")
+set(LIBS "scalapack" CACHE STRING "" FORCE)
+
+set(USE_MPI ON CACHE BOOL "" FORCE)
+set(USE_SCALAPACK ON CACHE BOOL "" FORCE)
+set(USE_LIBXC ON CACHE BOOL "" FORCE)
+set(USE_HDF5 OFF CACHE BOOL "" FORCE)
+set(USE_RLSY ON CACHE BOOL "" FORCE)
+set(ELPA2_KERNEL "" CACHE STRING "Change to AVX/AVX2/AVX512 if running on Intel processors" FORCE)
