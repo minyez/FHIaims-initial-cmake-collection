@@ -1,7 +1,7 @@
 set(CMAKE_Fortran_COMPILER "mpifort" CACHE STRING "" FORCE)
 # debug flags: -fcheck=all -fbacktrace
-set(CMAKE_Fortran_FLAGS "-g -O0 -fallow-argument-mismatch -ffree-line-length-none -Wl,-lstdc++" CACHE STRING "" FORCE)
-set(Fortran_MIN_FLAGS "-g -O0 -fallow-argument-mismatch -ffree-line-length-none" CACHE STRING "" FORCE)
+set(CMAKE_Fortran_FLAGS "-g -Wall -fbacktrace -fcheck=bounds -Wuninitialized -fcheck=pointer -O0 -fallow-argument-mismatch -ffree-line-length-none -Wl,-lstdc++" CACHE STRING "" FORCE)
+set(Fortran_MIN_FLAGS "-g -Wall -fbacktrace -fcheck=bounds -Wuninitialized -fcheck=pointer -O0 -fallow-argument-mismatch -ffree-line-length-none" CACHE STRING "" FORCE)
 set(CMAKE_C_COMPILER "mpicc" CACHE STRING "" FORCE)
 set(CMAKE_C_FLAGS "-g -O0" CACHE STRING "" FORCE)
 set(CMAKE_CXX_COMPILER "mpicxx" CACHE STRING "" FORCE)
