@@ -1,5 +1,5 @@
 # Intel Compilers
-set(CMAKE_Fortran_COMPILER "mpiifort" CACHE STRING "" FORCE)
+set(CMAKE_Fortran_COMPILER "mpifort" CACHE STRING "" FORCE)
 set(CMAKE_Fortran_FLAGS "-O3 -ip -fp-model precise" CACHE STRING "" FORCE)
 set(Fortran_MIN_FLAGS "-O0 -fp-model precise" CACHE STRING "" FORCE)
 set(CMAKE_C_COMPILER "icc" CACHE STRING "" FORCE)
@@ -15,7 +15,6 @@ set(USE_SCALAPACK ON CACHE BOOL "" FORCE)
 set(USE_LIBXC ON CACHE BOOL "" FORCE)
 set(USE_HDF5 OFF CACHE BOOL "" FORCE)
 set(USE_RLSY ON CACHE BOOL "" FORCE)
-set(USE_DFTD3 OFF CACHE BOOL "" FORCE)
 set(ELPA2_KERNEL "AVX512" CACHE STRING "Change to AVX/AVX2/AVX512 if running on Intel processors" FORCE)
 
 # GNU Compilers

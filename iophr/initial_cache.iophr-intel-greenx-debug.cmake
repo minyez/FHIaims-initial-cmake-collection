@@ -1,11 +1,12 @@
 # Intel Compilers
 set(CMAKE_Fortran_COMPILER "mpiifort" CACHE STRING "" FORCE)
-set(CMAKE_Fortran_FLAGS "-O3 -ip -fp-model precise" CACHE STRING "" FORCE)
-set(Fortran_MIN_FLAGS "-O0 -fp-model precise" CACHE STRING "" FORCE)
+set(CMAKE_Fortran_FLAGS "-O3 -ip -fp-model precise -check bounds -check uninit -check pointers -traceback -g -fpe0" CACHE STRING "" FORCE)
+# Fortran_MIN_FLAGS is intentionally left out of this build to ensure all files are compiled with debug flags
+# set(Fortran_MIN_FLAGS "-O0 -fp-model precise" CACHE STRING "" FORCE)
 set(CMAKE_C_COMPILER "icc" CACHE STRING "" FORCE)
-set(CMAKE_C_FLAGS "-O3 -ip -fp-model precise -std=gnu99" CACHE STRING "" FORCE)
+set(CMAKE_C_FLAGS "-O3 -ip -fp-model precise -std=gnu99 -traceback -g -fp_speculation=safe" CACHE STRING "" FORCE)
 set(CMAKE_CXX_COMPILER "icpc" CACHE STRING "" FORCE)
-set(CMAKE_CXX_FLAGS "-O3 -ip -fp-model precise" CACHE STRING "" FORCE)
+set(CMAKE_CXX_FLAGS "-O3 -ip -fp-model precise -traceback -g -fp_speculation=safe" CACHE STRING "" FORCE)
 set(LIB_PATHS "$ENV{MKLROOT}/lib/intel64" CACHE STRING "" FORCE)
 set(LIBS "mkl_intel_lp64 mkl_sequential mkl_core mkl_blacs_intelmpi_lp64 mkl_scalapack_lp64" CACHE STRING "" FORCE)
 set(USE_GREENX ON CACHE BOOL "" FORCE)
