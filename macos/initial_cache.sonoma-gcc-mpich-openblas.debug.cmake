@@ -1,12 +1,12 @@
 set(CMAKE_Fortran_COMPILER "mpifort" CACHE STRING "" FORCE)
 # debug flags: -fcheck=all -fbacktrace
-set(CMAKE_Fortran_FLAGS "-fc=gfortran-13 -g -Wall -O0 -fbacktrace -fcheck=bounds -Wuninitialized -fcheck=pointer -fallow-argument-mismatch -ffree-line-length-none -Wl,-ld_classic -Wl,-lstdc++" CACHE STRING "" FORCE)
-set(Fortran_MIN_FLAGS "-fc=gfortran-13 -g -Wall -O0 -fbacktrace -fcheck=bounds -Wuninitialized -fcheck=pointer -fallow-argument-mismatch -ffree-line-length-none -Wl,-ld_classic" CACHE STRING "" FORCE)
+set(CMAKE_Fortran_FLAGS "-fc=gfortran-13 -g -Wall -O0 -fbacktrace -fcheck=bounds -Wno-unused-variable -Wno-ampersand -Wno-tabs -Wno-unused-dummy-argument -Wuninitialized -fcheck=pointer -fallow-argument-mismatch -ffree-line-length-none -Wl,-lstdc++" CACHE STRING "" FORCE)
+set(Fortran_MIN_FLAGS   "-fc=gfortran-13 -g -Wall -O0 -fbacktrace -fcheck=bounds -Wno-unused-variable -Wno-ampersand -Wno-tabs -Wno-unused-dummy-argument -Wuninitialized -fcheck=pointer -fallow-argument-mismatch -ffree-line-length-none" CACHE STRING "" FORCE)
 set(CMAKE_C_COMPILER "mpicc" CACHE STRING "" FORCE)
-set(CMAKE_C_FLAGS "-cc=gcc-13 -g -Wall -O0 -Wl,-ld_classic" CACHE STRING "" FORCE)
+set(CMAKE_C_FLAGS "-cc=gcc-13 -g -Wall -O0" CACHE STRING "" FORCE)
 set(CMAKE_CXX_COMPILER "mpicxx" CACHE STRING "" FORCE)
-set(CMAKE_CXX_FLAGS "-cxx=g++-13 -g -Wall -O0 -Wl,-ld_classic" CACHE STRING "" FORCE)
-set(LIB_PATHS "/opt/packages/scalapack/2.2.2/gcc-13.4.0-mpich-4.3.2-openblas /opt/homebrew/Cellar/openblas/0.3.29/lib" CACHE STRING "")
+set(CMAKE_CXX_FLAGS "-cxx=g++-13 -g -Wall -O0" CACHE STRING "" FORCE)
+set(LIB_PATHS "/opt/packages/scalapack/2.2.2/gcc-13.4.0-mpich-4.3.0-openblas /opt/homebrew/Cellar/openblas/0.3.29/lib" CACHE STRING "")
 set(LIBS "scalapack openblas" CACHE STRING "" FORCE)
 # for GreenX to use the same library
 set(BLAS_LIBRARIES "-L/opt/homebrew/Cellar/openblas/0.3.29/lib -lblas" CACHE STRING "")
