@@ -1,7 +1,7 @@
 set(CMAKE_Fortran_COMPILER "mpifort" CACHE STRING "" FORCE)
 # debug flags: -fcheck=all -fbacktrace
-set(CMAKE_Fortran_FLAGS "-fc=gfortran-13 -g -Wall -O0 -fbacktrace -fcheck=bounds -Wno-unused-variable -Wno-ampersand -Wno-tabs -Wno-unused-dummy-argument -Wuninitialized -fcheck=pointer -fallow-argument-mismatch -ffree-line-length-none -Wl,-lstdc++" CACHE STRING "" FORCE)
-set(Fortran_MIN_FLAGS   "-fc=gfortran-13 -g -Wall -O0 -fbacktrace -fcheck=bounds -Wno-unused-variable -Wno-ampersand -Wno-tabs -Wno-unused-dummy-argument -Wuninitialized -fcheck=pointer -fallow-argument-mismatch -ffree-line-length-none" CACHE STRING "" FORCE)
+set(CMAKE_Fortran_FLAGS "-fc=gfortran-13 -g -Wall -O0 -fbacktrace -fcheck=bounds -Wno-unused-variable -Wno-unused-function -Wno-ampersand -Wno-tabs -Wno-unused-dummy-argument -Wuninitialized -fcheck=pointer -fallow-argument-mismatch -ffree-line-length-none -Wl,-lstdc++" CACHE STRING "" FORCE)
+set(Fortran_MIN_FLAGS   "-fc=gfortran-13 -g -Wall -O0 -fbacktrace -fcheck=bounds -Wno-unused-variable -Wno-unused-function -Wno-ampersand -Wno-tabs -Wno-unused-dummy-argument -Wuninitialized -fcheck=pointer -fallow-argument-mismatch -ffree-line-length-none" CACHE STRING "" FORCE)
 set(CMAKE_C_COMPILER "mpicc" CACHE STRING "" FORCE)
 set(CMAKE_C_FLAGS "-cc=gcc-13 -g -Wall -O0" CACHE STRING "" FORCE)
 set(CMAKE_CXX_COMPILER "mpicxx" CACHE STRING "" FORCE)
